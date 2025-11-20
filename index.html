@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Editor App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="container">
+    <h1>VidRipper</h1>
+
+    <div class="input-group">
+      <label for="songInput" class="custom-file-upload">Upload Audio</label>
+      <input type="file" id="songInput" accept="audio/*">
+      <span class="file-name" id="song-file-name">No file chosen</span>
+    </div>
+
+    <button id="extractInstrumental">Extract Instrumental</button>
+    <button id="exportAudio">Export Instrumental</button>
+
+    <audio id="preview" controls></audio>
+  </div>
+
+  <div id="loading" style="display:none;">Loading...</div>
+
+  <script src="https://unpkg.com/@ffmpeg/ffmpeg@0.12.10/dist/umd/ffmpeg.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
